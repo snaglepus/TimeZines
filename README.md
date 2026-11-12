@@ -15,7 +15,7 @@ Opening `index.html` straight from disk also works, but offline/install support 
 
 ## Deploy
 
-Upload the folder (minus `mockups/`) to any static host: GitHub Pages, Netlify, Cloudflare Pages, S3.
+Upload the folder to any static host: GitHub Pages, Netlify, Cloudflare Pages, S3.
 
 ## Files
 
@@ -27,7 +27,6 @@ Upload the folder (minus `mockups/`) to any static host: GitHub Pages, Netlify, 
 | `cities.js` | ~230 cities mapped to IANA timezones. Every other zone the browser knows is also searchable |
 | `sw.js`, `manifest.webmanifest`, `icon*` | Offline support and add-to-home-screen |
 | `fonts/` | Self-hosted IBM Plex Sans Condensed and JetBrains Mono |
-| `mockups/` | The three design explorations (not needed to run the app) |
 
 Your cities, home override, 12/24h choice, theme and meeting-times filter are saved in `localStorage` under `timezines:v1`.
 
