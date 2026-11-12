@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>TimeZines</title>
+<meta name="description" content="Compare timezones on a 24-hour business-hours heat map. Runs entirely in your browser.">
+<meta name="theme-color" content="#e9ecef">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preload" href="fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app" id="app">
+  <header class="top" id="top"></header>
+  <main class="scroller" id="sc" aria-label="Timeline">
+    <div class="grid" id="grid"></div>
+  </main>
+  <footer class="legend">
+    <span><i class="sw c-biz"></i>Business hours</span>
+    <span><i class="sw c-o1"></i><i class="sw c-o2"></i><i class="sw c-o3"></i>Early / late</span>
+    <span><i class="sw c-night"></i>Night</span>
+    <span><i class="sw c-wkd"></i>Weekend</span>
+    <span class="hint">Hover the hours to compare · drag ⠿ to reorder · press / to add a city</span>
+  </footer>
+
+  <div class="picker" id="picker" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="ptitle">
+      <p class="ptitle" id="ptitle">Add a city</p>
+      <div class="ph">
+        <input id="q" type="search" placeholder="Type a city or country" autocomplete="off" spellcheck="false" enterkeyhint="go" aria-label="Search cities" aria-controls="results">
+        <button data-act="close">Cancel</button>
+      </div>
+      <ul id="results" role="listbox"></ul>
+      <button class="pbtn" id="reset" data-act="reset" hidden></button>
+      <button class="pbtn danger" id="remove" data-act="remove" hidden></button>
+    </div>
+  </div>
+</div>
+<script src="cities.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
